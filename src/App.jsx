@@ -7,6 +7,7 @@ import DragAndDrop from "./Pages/DragAndDrop";
 import Divider from "./Pages/Divider";
 import { lessons } from "./data/items.json";
 import VideoPlayer from "./Pages/VideoPlayer";
+import React from "react";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -17,12 +18,12 @@ function AnimatedRoutes() {
         <Route path="/" element={<Navigate to="/lessons/1"/>}/>
         {
           lessons.map(lesson => 
-            <>
+            <React.Fragment key={lesson.id}>
               <Route path={`/lessons/${lesson.id}`} element={<PageWrapper><Divider lesson={lesson}/></PageWrapper>}/>
               <Route path={`/lessons/${lesson.id}/1`} element={<PageWrapper><Clicking lesson={lesson}/></PageWrapper>}/>
               <Route path={`/lessons/${lesson.id}/2`} element={<PageWrapper><DragAndDrop lesson={lesson}/></PageWrapper>} />
               <Route path={`/lessons/${lesson.id}/3`} element={<PageWrapper><VideoPlayer lesson={lesson}/></PageWrapper>} />
-            </>
+            </React.Fragment>
           )
         }
         <Route path="*" element={<p>404</p>} />
