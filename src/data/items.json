@@ -1,0 +1,204 @@
+{
+  "globals": {
+    "lives" : 3,
+    "sounds": {
+      "win": "/assets/globals/sounds/win.mp3",
+      "correct": "/assets/globals/sounds/correct.mp3",
+      "wrong": "/assets/globals/sounds/wrong.mp3",
+      "fail": "/assets/globals/sounds/fail.mp3",
+      "tap": "/assets/globals/sounds/tap.mp3"
+    },
+    "images": {
+      "volume": "/assets/globals/images/volume.png",
+      "gameController": "/assets/globals/images/game-controller.png",
+      "video": "/assets/globals/images/video.png"
+    }
+  },
+  "lessons": [
+    {
+      "id": 1,
+      "title": "دنیای زیبای من",
+      "video": "https://drive.google.com/file/d/18Li3Hf9OmafOpIqpB3Al5y6BEI4fZAsA/preview",
+      "elements": [
+        {
+          "id": "kids",
+          "dimensions": [
+            { "x": 1754, "y": 1969, "width": 1317, "height": 605 },
+            { "x": 2982, "y": 2268, "width": 1434, "height": 380 },
+            { "x": 4003, "y": 1892, "width": 387, "height": 438 }
+          ]
+        },
+        {
+          "id": "ghomri",
+          "dimensions": [{ "x": 2784, "y": 2677, "width": 476, "height": 476 }]
+        },
+        {
+          "id": "teacher",
+          "dimensions": [{ "x": 3180, "y": 1768, "width": 470, "height": 470 }]
+        },
+        {
+          "id": "basketball",
+          "dimensions": [{ "x": 1418, "y": 1615, "width": 321, "height": 546 }]
+        },
+        {
+          "id": "ghomri-chick",
+          "dimensions": [{ "x": 1552, "y": 831, "width": 400, "height": 400 }]
+        },
+        {
+          "id": "cat",
+          "dimensions": [{ "x": 27, "y": 1115, "width": 384, "height": 384 }]
+        },
+        {
+          "id": "crow",
+          "dimensions": [{ "x": 3828, "y": 546, "width": 410, "height": 410 }]
+        },
+        {
+          "id": "flag",
+          "dimensions": [{ "x": 2517, "y": 1219, "width": 397, "height": 497 }]
+        },
+        {
+          "id": "soccer",
+          "dimensions": [{ "x": 538, "y": 2538, "width": 464, "height": 464 }]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "بپرسیم و بدانیم",
+      "video": "",
+      "elements": [
+        {
+          "id": "kids",
+          "dimensions": [
+            { "x": 1345, "y": 2028, "width": 3332, "height": 1109 },
+            { "x": 183, "y": 2610, "width": 1250, "height": 439 },
+            { "x": 183, "y": 2167 , "width": 450, "height": 638 }
+          ]
+        },
+        {
+          "id": "broom",
+          "dimensions": [{ "x": 817, "y": 1851, "width": 495, "height": 716 }]
+        },
+        {
+          "id": "flag",
+          "dimensions": [{ "x": 2426, "y": 1171, "width": 454, "height": 580 }]
+        },
+        {
+          "id": "birds",
+          "dimensions": [{ "x": 1635, "y": 1276, "width": 752, "height": 537 }]
+        },
+        {
+          "id": "wind",
+          "dimensions": [{ "x": 0, "y": 0, "width": 1490, "height": 1712 }]
+        },
+        {
+          "id": "cat",
+          "dimensions": [{ "x": 4262, "y": 1015, "width": 408, "height": 408 }]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "محله ی ما",
+      "video": "",
+      "elements": [
+        {
+          "id": "azan",
+          "dimensions": [{ "x": 3163, "y": 1759, "width": 1680, "height": 1548 }]
+        },
+        {
+          "id": "baker",
+          "dimensions": [{ "x": 4128, "y": 813, "width": 700, "height": 902 }]
+        },
+        {
+          "id": "fountain",
+          "dimensions": [{ "x": 2437, "y": 29, "width": 481, "height": 515 }]
+        },
+        {
+          "id": "bike",
+          "dimensions": [{ "x": 1987, "y": 41, "width": 287, "height": 244 }]
+        },
+        {
+          "id": "motorbike",
+          "dimensions": [{ "x": 2572, "y": 1142, "width": 428, "height": 356 }]
+        },
+        {
+          "id": "population",
+          "dimensions": [
+            { "x": 1715, "y": 96, "width": 186, "height": 204 },
+            { "x": 1828, "y": 288, "width": 519, "height": 471 },
+            { "x": 1563, "y": 1026, "width": 438, "height": 825 },
+            { "x": 637, "y": 1824, "width": 795, "height": 565 },
+            { "x": 2658, "y": 1740, "width": 286, "height": 464 },
+            { "x": 2880, "y": 836, "width": 228, "height": 329 },
+            { "x": 3228, "y": 977, "width": 258, "height": 343 },
+            { "x": 3543, "y": 316, "width": 280, "height": 402 },
+            { "x": 2958, "y": 228, "width": 227, "height": 316 },
+            { "x": 2750, "y": 567, "width": 341, "height": 212 }
+          ]
+        },
+        {
+          "id": "street",
+          "dimensions": [
+            { "x": 1602, "y": 1824, "width": 990, "height": 1010 },
+            { "x": 3474, "y": 739, "width": 654, "height": 475 },
+            { "x": 3307, "y": 800, "width": 192, "height": 182 },
+            { "x": 3857, "y": 385, "width": 413, "height": 414 },
+            { "x": 2022, "y": 858, "width": 415, "height": 625 },
+            { "x": 1442, "y": 772, "width": 833, "height": 257 },
+            { "x": 1569, "y": 479, "width": 270, "height": 352 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "گیاهان و جانوران اطراف ما",
+      "video": "",
+      "elements": [
+        {
+          "id": "goat",
+          "dimensions": [{ "x": 3269, "y": 2090, "width": 505, "height": 421 }]
+        },
+        {
+          "id": "jumping-frog",
+          "dimensions": [{ "x": 3392, "y": 2681, "width": 289, "height": 221 }]
+        },
+        {
+          "id": "static-frog",
+          "dimensions": [{ "x": 1056, "y": 2803, "width": 175, "height": 170 }]
+        },
+        {
+          "id": "sheeps",
+          "dimensions": [{ "x": 1411, "y": 2039, "width": 717, "height": 414 }]
+        },
+        {
+          "id": "duck",
+          "dimensions": [
+            { "x": 1442, "y": 2527, "width": 328, "height": 220 },
+            { "x": 1188, "y": 2301, "width": 223, "height": 380 },
+            { "x": 747, "y": 2301, "width": 352, "height": 230 }
+          ]
+        },
+        {
+          "id": "chicken",
+          "dimensions": [{ "x": 625, "y": 2532, "width": 289, "height": 298 }]
+        },
+        {
+          "id": "chick",
+          "dimensions": [{ "x": 376, "y": 2578, "width": 242, "height": 163 }]
+        },
+        {
+          "id": "lake",
+          "dimensions": [
+            { "x": 2159, "y": 2069, "width": 1017, "height": 1205 },
+            { "x": 1854, "y": 2475, "width": 497, "height": 418 },
+            { "x": 3084, "y": 2563, "width": 266, "height": 473 },
+            { "x": 1339, "y": 2774, "width": 936, "height": 447 },
+            { "x": 2968, "y": 2956, "width": 1176, "height": 310 }
+          ]
+        }
+      ]
+    }
+  ]
+}
