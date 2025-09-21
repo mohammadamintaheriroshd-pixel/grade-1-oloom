@@ -1,9 +1,27 @@
 let currentAudio = null
-const steps = 30;
 
 export async function audioStop() {
   try {
-    if (currentAudio) currentAudio.pause();
+    if (!currentAudio) return;
+
+    const audio = currentAudio;
+    const initialVolume = audio.volume;
+    const fadeSteps = 20;
+    const stepTime = 1000 / fadeSteps;
+
+    let currentStep = 0;
+
+    const fadeOut = setInterval(() => {
+      currentStep++;
+      const newVolume = initialVolume * (1 - currentStep / fadeSteps);
+      audio.volume = Math.max(newVolume, 0);
+
+      if (currentStep >= fadeSteps) {
+        clearInterval(fadeOut);
+        audio.pause();
+        audio.volume = initialVolume;
+      }
+    }, stepTime);
   } catch (err) {
     console.error(err);
   }
@@ -11,7 +29,7 @@ export async function audioStop() {
 
 export async function audioPlay(src, volume = 1) {
   try {
-      if (currentAudio) currentAudio.pause();
+      audioStop();
 
       const audio = new Audio();
       audio.src = src;
