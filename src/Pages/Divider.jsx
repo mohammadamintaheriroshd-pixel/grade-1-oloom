@@ -83,7 +83,7 @@ function IconButton({back, imageSrc, index, type, lesson}) {
       }}
     >
       <div
-        className="absolute top-0 left-0 w-full h-full backdrop-blur-[1px] backdrop-brightness-90 rounded-3xl z-3"
+        className="absolute top-0 left-0 w-full h-full backdrop-brightness-90 rounded-3xl z-3"
       />
       <div
         className="absolute top-0 left-0 bg-gradient-to-r from-neutral-800/80 to-neutral-800/0 h-full w-[80%] z-4"
