@@ -38,7 +38,7 @@ export default function Divider({ lesson }) {
               animate={{ scale: 1 }}
               transition={{ type: "spring", duration: 1, delay: 0.2 * 2 + 0.2 }}
               src={`/assets/lessons/${lesson.id}/images/divider/logo.png`}
-              className="w-70 h-30 object-cover aspect-auto z-2 relative left-8"
+              className="md:w-70 w-60 h-30 object-cover aspect-auto z-2 relative left-8"
             />
             <IconButton index={2} type={"1"} lesson={lesson} back={`/assets/lessons/${lesson.id}/images/divider/clicking.jpg`} imageSrc={globals.images.volume}/>
             <IconButton index={3} type={"2"} lesson={lesson} back={`/assets/lessons/${lesson.id}/images/divider/drag-and-drop.jpg`} imageSrc={globals.images.gameController}/>
