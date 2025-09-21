@@ -37,10 +37,6 @@
           "dimensions": [{ "x": 3180, "y": 1768, "width": 470, "height": 470 }]
         },
         {
-          "id": "basketball",
-          "dimensions": [{ "x": 1418, "y": 1615, "width": 321, "height": 546 }]
-        },
-        {
           "id": "ghomri-chick",
           "dimensions": [{ "x": 1552, "y": 831, "width": 400, "height": 400 }]
         },
