@@ -95,7 +95,29 @@ export default function Clicking({ lesson }) {
               className="z-105 absolute bottom-4 right-24"
             >
               <CustomButton className="w-20" varient={currentlyPlaying === "mix" ? "blue" : "gray"} onClick={() => currentlyPlaying === "mix" ? audioStop() : audioPlay(`/assets/lessons/${lesson.id}/sounds/mix.mp3`)} indSound={false}>
-                <Volume2Icon size={40}/>
+                  <motion.div
+                    animate={
+                      currentlyPlaying === "mix"
+                      ? { 
+                          y: [10, -10, 10, -10, 10],
+                          scaleY: [0.8, 1, 0.8, 1, 0.8],
+                          rotate: [0, -6, 0, 6, 0],
+                          transition: {
+                            duration: 0.8,
+                            ease: [[0,.63,.49,1.01], [.4,0,1,.53], [0,.63,.49,1.01], [.4,0,1,.53]],
+                            repeat: Infinity,
+                          repeatType: "loop",
+                          }
+                        }
+                      : {
+                          y: 0,
+                          scaleY: 1,
+                          rotate: 0,
+                        }
+                    }
+                  >
+                  <Volume2Icon size={40}/>
+                </motion.div>
               </CustomButton>
             </motion.div>
           }
