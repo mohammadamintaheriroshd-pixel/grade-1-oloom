@@ -140,9 +140,12 @@
             { "x": 2880, "y": 836, "width": 228, "height": 329 },
             { "x": 3228, "y": 977, "width": 258, "height": 343 },
             { "x": 3543, "y": 316, "width": 280, "height": 402 },
-            { "x": 2958, "y": 228, "width": 227, "height": 316 },
             { "x": 2750, "y": 567, "width": 341, "height": 212 }
           ]
+        },
+        {
+          "id": "rope",
+          "dimensions": [{ "x": 2958, "y": 228, "width": 227, "height": 316 }]
         },
         {
           "id": "street",
