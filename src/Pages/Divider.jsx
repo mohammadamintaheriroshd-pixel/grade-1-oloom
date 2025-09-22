@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { cn } from "../lib/utils";
-import { audioStop, audioPlayInd } from "../utils/audio";
+import { useAudio } from "../utils/audio";
 import { globals } from "../data/items.json"
 
 
 export default function Divider({ lesson }) {
+  const { audioStop } = useAudio();
 
   useEffect(()=> {
     document.title =  `علوم | ${lesson.title}`;
@@ -56,6 +57,7 @@ export default function Divider({ lesson }) {
 
 function IconButton({back, imageSrc, index, type, lesson}) {
   const navigate = useNavigate();
+  const { audioPlayInd } = useAudio();
   
   const [onClick, setOnClick] = useState(false)
 

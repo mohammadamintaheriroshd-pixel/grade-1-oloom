@@ -11,14 +11,14 @@ import Lottie from "lottie-react";
 import { cn } from "../lib/utils";
 import CustomButton from "../components/ui/custom-button";
 import PlayButton from "../components/PlayButton";
-import { audioPlay, audioStop, audioPlayInd } from "../utils/audio";
+import { useAudio } from "../utils/audio";
 import { pixelToPercent } from "../utils/image";
 import ZoomIn from "../assets/animations/ZoomIn.json"
 import confetti from "canvas-confetti";
 import { globals } from "../data/items.json"
 
 export default function DragAndDrop({ lesson }) {
-
+  const { audioPlay, audioPlayInd, audioStop } = useAudio();
   const [loaded, setLoaded] = useState(false)
 
   // Stopping every audio.
@@ -312,6 +312,7 @@ function Lives({lives, allCorrect, toggle}) {
 }
 
 function Dock({ allCorrect, dndElements, setDndElements, lesson, toggle }) {
+  const { audioPlay } = useAudio();
   const { setNodeRef } = useDroppable({ id: "dock" });
 
   const [isDragging, setIsDragging] = useState(false);
@@ -324,7 +325,7 @@ function Dock({ allCorrect, dndElements, setDndElements, lesson, toggle }) {
         (toggle && !allCorrect) && "lg:translate-x-[0] lg:translate-y-[unset] translate-y-[0] translate-x-[unset]",
       )}
     >
-      <div
+      <motion.div
         ref={setNodeRef}
         onClick={() => setIsDockOpen(true)}
         onMouseEnter={() => setIsDockOpen(true)}
@@ -353,19 +354,19 @@ function Dock({ allCorrect, dndElements, setDndElements, lesson, toggle }) {
             )
           }
         </div>
-      </div>
+      </motion.div>
     </div>
     
   )
 }
 
 function DraggableButton({ element, onClick, remove, setDragging }) {
-    const {attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
-      id: element.id,
-    })
-    const finalPos = element.lockedPos || { x: 0, y: 0 };
+  const {attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+    id: element.id,
+  })
+  const finalPos = element.lockedPos || { x: 0, y: 0 };
 
-    useEffect(()=> { setDragging(isDragging) }, [isDragging])
+  useEffect(()=> { setDragging(isDragging) }, [isDragging])
 
   return(
     <>
@@ -463,9 +464,11 @@ function DraggableButtonOverlay({ element }) {
 }
 
 function DropZone({element, dim, imageDims, allCorrect, index}) {
-    const { setNodeRef } = useDroppable({
-      id: `${element.id}/${index}`
-    });
+  const { audioPlay } = useAudio();
+
+  const { setNodeRef } = useDroppable({
+    id: `${element.id}/${index}`
+  });
 
   const buttonDims = pixelToPercent(dim, imageDims, true)
 

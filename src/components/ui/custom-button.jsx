@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { cn } from "../../lib/utils";
-import { audioPlayInd } from "../../utils/audio";
+import { useAudio } from "../../utils/audio";
 import { globals } from "../../data/items.json"
 
 const VARIENTS = {
@@ -13,10 +13,17 @@ const VARIENTS = {
     bg: "bg-gray-500",
     bgDark: "bg-gray-700",
     border: "border-gray-700",
+  },
+  blue: {
+    bg: "bg-blue-500",
+    bgDark: "bg-blue-700",
+    border: "border-blue-700",
   }
 }
 
 export default function CustomButton({children, varient = "green", className, onClick, indSound = true}) {
+  const { audioPlayInd } = useAudio();
+  
   const [clicking, setClicking] = useState(false);
   const style = VARIENTS[varient];
 

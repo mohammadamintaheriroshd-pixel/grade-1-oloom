@@ -8,6 +8,7 @@ import Divider from "./Pages/Divider";
 import { lessons } from "./data/items.json";
 import VideoPlayer from "./Pages/VideoPlayer";
 import React from "react";
+import { AudioContextProvider } from "./utils/audio";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -49,9 +50,11 @@ function PageWrapper({ children }) {
 export default function App() {
   return(
     <div className="overflow-hidden">
-      <BrowserRouter>
-        <AnimatedRoutes/>
-      </BrowserRouter>
+      <AudioContextProvider>
+        <BrowserRouter>
+          <AnimatedRoutes/>
+        </BrowserRouter>
+      </AudioContextProvider>
     </div>
   )
 }

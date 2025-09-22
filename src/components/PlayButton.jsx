@@ -2,10 +2,11 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { PlayIcon } from "lucide-react";
 import { cn } from "../lib/utils";
-import { audioPlay } from "../utils/audio";
+import { useAudio } from "../utils/audio";
 import Button from "../components/ui/custom-button";
 
 export default function PlayButton({src, func}){
+  const { audioPlay } = useAudio();
   const [toggle, setToggle] = useState(false);
 
   function clickHandle() {

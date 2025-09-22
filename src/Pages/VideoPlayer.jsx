@@ -5,10 +5,11 @@ import { useNavigate } from "react-router-dom"
 import { motion } from "motion/react"
 import { SquareArrowUpLeftIcon } from "lucide-react"
 import CustomButton from "../components/ui/custom-button"
-import { audioStop } from "../utils/audio"
+import { useAudio } from "../utils/audio"
 
 export default function VideoPlayer({ lesson }) {
   const navigate = useNavigate();
+  const { audioStop } = useAudio();
   
   useEffect(()=> {
     document.title =  `علوم | ${lesson.title}`;

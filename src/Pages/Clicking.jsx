@@ -10,12 +10,12 @@ import Lottie from "lottie-react";
 import { cn } from "../lib/utils";
 import CustomButton from "../components/ui/custom-button";
 import PlayButton from "../components/PlayButton";
-import { audioPlay, audioStop } from "../utils/audio";
+import { useAudio } from "../utils/audio";
 import { pixelToPercent } from "../utils/image";
 import ZoomIn from "../assets/animations/ZoomIn.json"
 
 export default function Clicking({ lesson }) {
-
+  const {currentlyPlaying, audioPlay, audioStop} = useAudio()
   const [loaded, setLoaded] = useState(false)
   
   useEffect(()=> {
@@ -94,7 +94,7 @@ export default function Clicking({ lesson }) {
               transition={{ type: "spring", duration: 1 }}
               className="z-105 absolute bottom-4 right-24"
             >
-              <CustomButton className="w-20" varient="gray" onClick={() => audioPlay(`/assets/lessons/${lesson.id}/sounds/mix.mp3`)} indSound={false}>
+              <CustomButton className="w-20" varient={currentlyPlaying === "mix" ? "blue" : "gray"} onClick={() => currentlyPlaying === "mix" ? audioStop() : audioPlay(`/assets/lessons/${lesson.id}/sounds/mix.mp3`)} indSound={false}>
                 <Volume2Icon size={40}/>
               </CustomButton>
             </motion.div>
