@@ -8,7 +8,7 @@ import Divider from "./Pages/Divider";
 import { lessons } from "./data/items.json";
 import VideoPlayer from "./Pages/VideoPlayer";
 import React from "react";
-import { AudioContextProvider } from "./utils/audio";
+import { AudioContextProvider } from "./context/audio";
 
 function AnimatedRoutes() {
   const location = useLocation();

@@ -38,7 +38,8 @@ export function AudioContextProvider({ children }) {
   async function audioPlay(src, volume = 1) {
     try {
         audioStop();
-        setCurrentlyPlaying(src.split("/").pop().replace(/\.mp3$/i, ""));
+        const srcName = src.split("/").pop().replace(/\.mp3$/i, "")
+        setCurrentlyPlaying(srcName);
 
         const audio = new Audio();
         audio.src = src;
@@ -48,6 +49,10 @@ export function AudioContextProvider({ children }) {
         await audio.play();
 
         currentAudio.current = audio;
+
+        audio.onpause = () => {
+          if (currentlyPlaying === srcName) setCurrentlyPlaying(null)
+        }
 
     } catch (err) {
       console.error(err);

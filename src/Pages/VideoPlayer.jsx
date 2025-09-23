@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { motion } from "motion/react"
 import { SquareArrowUpLeftIcon } from "lucide-react"
 import CustomButton from "../components/ui/custom-button"
-import { useAudio } from "../utils/audio"
+import { useAudio } from "../context/audio"
 
 export default function VideoPlayer({ lesson }) {
   const navigate = useNavigate();

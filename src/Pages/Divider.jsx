@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { cn } from "../lib/utils";
-import { useAudio } from "../utils/audio";
+import { useAudio } from "../context/audio";
 import { globals } from "../data/items.json"
 
 

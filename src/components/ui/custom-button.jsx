@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { cn } from "../../lib/utils";
-import { useAudio } from "../../utils/audio";
+import { useAudio } from "../../context/audio";
 import { globals } from "../../data/items.json"
 
 const VARIENTS = {

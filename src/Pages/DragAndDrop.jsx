@@ -11,7 +11,7 @@ import Lottie from "lottie-react";
 import { cn } from "../lib/utils";
 import CustomButton from "../components/ui/custom-button";
 import PlayButton from "../components/PlayButton";
-import { useAudio } from "../utils/audio";
+import { useAudio } from "../context/audio";
 import { pixelToPercent } from "../utils/image";
 import ZoomIn from "../assets/animations/ZoomIn.json"
 import confetti from "canvas-confetti";

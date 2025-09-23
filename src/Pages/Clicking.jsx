@@ -10,7 +10,7 @@ import Lottie from "lottie-react";
 import { cn } from "../lib/utils";
 import CustomButton from "../components/ui/custom-button";
 import PlayButton from "../components/PlayButton";
-import { useAudio } from "../utils/audio";
+import { useAudio } from "../context/audio";
 import { pixelToPercent } from "../utils/image";
 import ZoomIn from "../assets/animations/ZoomIn.json"
 
@@ -100,19 +100,28 @@ export default function Clicking({ lesson }) {
                       currentlyPlaying === "mix"
                       ? { 
                           y: [10, -10, 10, -10, 10],
+                          x: [0, -3, 0, 3, 0],
                           scaleY: [0.8, 1, 0.8, 1, 0.8],
                           rotate: [0, -6, 0, 6, 0],
                           transition: {
                             duration: 0.8,
                             ease: [[0,.63,.49,1.01], [.4,0,1,.53], [0,.63,.49,1.01], [.4,0,1,.53]],
                             repeat: Infinity,
-                          repeatType: "loop",
+                            repeatType: "loop",
+                            scaleY: {
+                              duration: 0.8,
+                              ease: ["easeOut", "easeIn", "easeOut", "easeIn"],
+                              repeat: Infinity,
+                              repeatType: "loop",
+                            }
                           }
                         }
                       : {
                           y: 0,
+                          x: 0,
                           scaleY: 1,
                           rotate: 0,
+                          opacity: 1,
                         }
                     }
                   >
