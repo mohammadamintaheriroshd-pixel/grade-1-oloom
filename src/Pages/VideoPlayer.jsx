@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { motion } from "motion/react"
@@ -38,9 +36,9 @@ export default function VideoPlayer({ lesson }) {
           <iframe 
             className="rounded-2xl shadow-lg  transition-all duration-300 ease-out h-[calc(100%-2rem)] w-[calc(100%-2rem)]"
             src={lesson.video}
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            />
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
         </motion.div>
     </div>
   )

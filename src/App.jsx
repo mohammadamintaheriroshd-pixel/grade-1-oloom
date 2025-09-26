@@ -1,5 +1,3 @@
-"use client";
-
 import { Navigate, Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import Clicking from "./Pages/Clicking";

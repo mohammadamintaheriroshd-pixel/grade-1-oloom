@@ -4,18 +4,24 @@ const AudioContext = createContext();
 
 export function AudioContextProvider({ children }) {
   const [currentlyPlaying, setCurrentlyPlaying] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackPosition, setPlayBackPosition] = useState(0);
+  const currentlyPlayingIdRef = useRef(null);
   const currentAudio = useRef(null);
 
   function audioStop() {
     try {
-      if (!currentAudio.current) return;
-
-      setCurrentlyPlaying(null)
+      setCurrentlyPlaying(null);
+      setIsPlaying(false)
+      setPlayBackPosition(0)
+      currentlyPlayingIdRef.current = null;
 
       const audio = currentAudio.current;
+      if (!audio) return;
+
       const initialVolume = audio.volume;
       const fadeSteps = 20;
-      const stepTime = 1000 / fadeSteps;
+      const stepTime = 200 / fadeSteps;
 
       let currentStep = 0;
 
@@ -35,25 +41,45 @@ export function AudioContextProvider({ children }) {
     }
   }
 
-  async function audioPlay(src, volume = 1) {
+  async function audioPlay(src, loop = false, volume = 1) {
     try {
-        audioStop();
-        const srcName = src.split("/").pop().replace(/\.mp3$/i, "")
-        setCurrentlyPlaying(srcName);
+      audioStop();
 
-        const audio = new Audio();
-        audio.src = src;
-        audio.preload = "auto";
-        audio.volume = volume;
-        
-        await audio.play();
+      const srcName = src.split("/").pop().replace(/\.mp3$/i, "");
+      setCurrentlyPlaying(srcName);
 
-        currentAudio.current = audio;
+      const uniqueId = crypto.randomUUID();
+      currentlyPlayingIdRef.current = uniqueId;
 
-        audio.onpause = () => {
-          if (currentlyPlaying === srcName) setCurrentlyPlaying(null)
+      const audio = new Audio(src);
+      audio.preload = "auto";
+      audio.volume = volume;
+      audio.loop = loop;
+
+      await audio.play().finally(() => {
+        setIsPlaying(true)
+        const playpackPostionInterval = setInterval(() => {
+          if (currentlyPlayingIdRef.current === uniqueId) setPlayBackPosition(prev => prev = prev + 1);
+          else clearInterval(playpackPostionInterval);
+        }, 10)
+      });
+      currentAudio.current = audio;
+
+      audio.onpause = () => {
+        if (currentlyPlayingIdRef.current === uniqueId) {
+          setCurrentlyPlaying(null);
+          setIsPlaying(false)
+          currentlyPlayingIdRef.current = null;
         }
+      };
 
+      audio.onended = () => {
+        if (currentlyPlayingIdRef.current === uniqueId) {
+          setCurrentlyPlaying(null);
+          setIsPlaying(false)
+          currentlyPlayingIdRef.current = null;
+        }
+      };
     } catch (err) {
       console.error(err);
     }
@@ -61,10 +87,8 @@ export function AudioContextProvider({ children }) {
 
   async function audioPlayInd(src) {
     try {
-      const audio = new Audio();
-      audio.src = src;
+      const audio = new Audio(src);
       audio.preload = "auto";
-
       await audio.play();
     } catch (err) {
       console.error(err);
@@ -73,20 +97,25 @@ export function AudioContextProvider({ children }) {
 
   const audioValues = useMemo(
     () => ({
-      currentlyPlaying, audioStop, audioPlay, audioPlayInd
+      currentlyPlaying,
+      isPlaying,
+      playbackPosition,
+      audioStop,
+      audioPlay,
+      audioPlayInd,
     }),
-    [currentlyPlaying]
-  )
+    [currentlyPlaying, isPlaying, playbackPosition]
+  );
 
-  return(
+  return (
     <AudioContext.Provider value={audioValues}>
       {children}
     </AudioContext.Provider>
-  )
+  );
 }
 
 export function useAudio() {
   const ctx = useContext(AudioContext);
-  if (!ctx) throw new Error("useAudio must be used inside AudioContextProvider Provider.");
+  if (!ctx) throw new Error("useAudio must be used inside AudioContextProvider.");
   return ctx;
 }

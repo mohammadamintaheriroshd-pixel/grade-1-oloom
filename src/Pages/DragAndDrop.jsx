@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
@@ -109,7 +107,7 @@ export default function DragAndDrop({ lesson }) {
   }
 
   function winning() {
-    audioPlay(globals.sounds.win, 0.3);
+    audioPlay(globals.sounds.win, false, 0.3);
     const duration = 1.4 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -171,7 +169,7 @@ export default function DragAndDrop({ lesson }) {
   return(
     <>
       <img
-        src={`/assets/lessons/${lesson.id}/images/main.webp`}
+        src={`/assets/lessons/${lesson.id}/images/main.jpg`}
         onLoad={onImageLoad}
         className="w-full h-full object-contain absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 hidden"
       />
@@ -246,7 +244,7 @@ export default function DragAndDrop({ lesson }) {
                             aspectRatio: displayedSize.width / displayedSize.height
                           }}>
                             <img
-                              src={`/assets/lessons/${lesson.id}/images/main.webp`}
+                              src={`/assets/lessons/${lesson.id}/images/main.jpg`}
                               className="w-full h-full object-contain absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2"
                             />
                             <EntireScreen/>
@@ -345,7 +343,7 @@ function Dock({ allCorrect, dndElements, setDndElements, lesson, toggle }) {
               <DraggableButton
                 key={i}
                 element={element}
-                onClick={() => audioPlay(`/assets/lessons/${lesson.id}/sounds/${lesson.elements[i].id}.mp3`)}
+                onClick={() => audioPlay(`/assets/lessons/${lesson.id}/sounds/${element.id}.mp3`)}
                 remove={() => 
                   setDndElements((datas) => datas.map((e) => e.id === element.id ? { ...e, removed: true } : e))
                 }

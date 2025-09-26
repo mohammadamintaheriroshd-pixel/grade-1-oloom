@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
@@ -69,7 +67,7 @@ export default function Clicking({ lesson }) {
   return(
     <>
       <img
-        src={`/assets/lessons/${lesson.id}/images/main.webp`}
+        src={`/assets/lessons/${lesson.id}/images/main.jpg`}
         onLoad={onImageLoad}
         className="w-full h-full object-contain absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 hidden"
       />
@@ -174,7 +172,7 @@ export default function Clicking({ lesson }) {
                             aspectRatio: displayedSize.width / displayedSize.height
                           }}>
                             <img
-                              src={`/assets/lessons/${lesson.id}/images/main.webp`}
+                              src={`/assets/lessons/${lesson.id}/images/main.jpg`}
                               className="w-full h-full object-contain absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2"
                             />
                             {

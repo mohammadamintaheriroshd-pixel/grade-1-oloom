@@ -23,48 +23,52 @@
         {
           "id": "kids",
           "dimensions": [
-            { "x": 1754, "y": 1969, "width": 1317, "height": 605 },
-            { "x": 2982, "y": 2268, "width": 1434, "height": 380 },
-            { "x": 4003, "y": 1892, "width": 387, "height": 438 },
-            { "x": 672, "y": 1904, "width": 624, "height": 642 },
-            { "x": 1410, "y": 1607, "width": 337, "height": 562 }
+            { "x": 877, "y": 984, "width": 658, "height": 302 },
+            { "x": 1491, "y": 1134, "width": 717, "height": 190 },
+            { "x": 2001, "y": 946, "width": 193, "height": 219 },
+            { "x": 336, "y": 952, "width": 312, "height": 321 },
+            { "x": 705, "y": 803, "width": 168, "height": 281 }
           ]
         },
         {
           "id": "ghomri",
-          "dimensions": [{ "x": 2784, "y": 2677, "width": 476, "height": 476 }]
+          "dimensions": [{ "x": 1392, "y": 1338, "width": 238, "height": 238 }]
         },
         {
           "id": "teacher",
-          "dimensions": [{ "x": 3180, "y": 1768, "width": 470, "height": 470 }]
+          "dimensions": [{ "x": 1590, "y": 884, "width": 235, "height": 235 }]
         },
         {
           "id": "ghomri-chick",
-          "dimensions": [{ "x": 1552, "y": 831, "width": 400, "height": 400 }]
+          "dimensions": [{ "x": 776, "y": 415, "width": 200, "height": 200 }]
         },
         {
           "id": "cat",
-          "dimensions": [{ "x": 27, "y": 1115, "width": 384, "height": 384 }]
+          "dimensions": [{ "x": 13, "y": 557, "width": 192, "height": 192 }]
         },
         {
           "id": "crow",
-          "dimensions": [{ "x": 3828, "y": 546, "width": 410, "height": 410 }]
+          "dimensions": [{ "x": 1914, "y": 273, "width": 205, "height": 205 }]
         },
         {
           "id": "flag",
-          "dimensions": [{ "x": 2517, "y": 1219, "width": 397, "height": 497 }]
+          "dimensions": [{ "x": 1258, "y": 609, "width": 198, "height": 248 }]
         },
         {
           "id": "ball",
-          "dimensions": [{ "x": 538, "y": 2538, "width": 464, "height": 464 }]
+          "dimensions": [{ "x": 269, "y": 1269, "width": 232, "height": 232 }]
         },
         {
           "id": "wind",
           "dimensions": [
-            { "x": 229, "y": 8, "width": 2887, "height": 822 },
-            { "x": -50, "y": -31, "width": 1249, "height": 1151 },
-            { "x": 416, "y": 579, "width": 1131, "height": 777 },
-            { "x": 1948, "y": 606, "width": 764, "height": 608 }
+            { "x": 114, "y": 4, "width": 1443, "height": 411 },
+            { "x": -25, "y": -16, "width": 624, "height": 575 },
+            { "x": 208, "y": 289, "width": 565, "height": 388 },
+            { "x": 974, "y": 303, "width": 382, "height": 304 },
+            { "x": 1079, "y": -6, "width": 818, "height": 520 },
+            { "x": 1813, "y": -6, "width": 700, "height": 279 },
+            { "x": 2138, "y": 231, "width": 348, "height": 196 },
+            { "x": 1018, "y": 463, "width": 241, "height": 267 }
           ]
         }
       ]
@@ -77,30 +81,36 @@
         {
           "id": "kids",
           "dimensions": [
-            { "x": 1345, "y": 2028, "width": 3332, "height": 1109 },
-            { "x": 183, "y": 2610, "width": 1250, "height": 439 },
-            { "x": 183, "y": 2167 , "width": 450, "height": 638 }
+            { "x": 672, "y": 1014, "width": 1666, "height": 554 },
+            { "x": 91, "y": 1305, "width": 625, "height": 219 },
+            { "x": 91, "y": 1083 , "width": 225, "height": 319 }
           ]
         },
         {
           "id": "broom",
-          "dimensions": [{ "x": 817, "y": 1851, "width": 495, "height": 716 }]
+          "dimensions": [{ "x": 408, "y": 925, "width": 247, "height": 358 }]
         },
         {
           "id": "flag",
-          "dimensions": [{ "x": 2426, "y": 1171, "width": 454, "height": 580 }]
+          "dimensions": [{ "x": 1213, "y": 585, "width": 227, "height": 290 }]
         },
         {
           "id": "birds",
-          "dimensions": [{ "x": 1635, "y": 1276, "width": 752, "height": 537 }]
+          "dimensions": [{ "x": 817, "y": 638, "width": 376, "height": 268 }]
         },
         {
           "id": "wind",
-          "dimensions": [{ "x": 0, "y": 0, "width": 1490, "height": 1712 }]
+          "dimensions": [
+            { "x": 0, "y": 0, "width": 745, "height": 856 },
+            { "x": 300, "y": 0, "width": 1965, "height": 536 },
+            { "x": 816, "y": 487, "width": 369, "height": 139 },
+            { "x": 1132, "y": 471, "width": 331, "height": 106 },
+            { "x": 1463, "y": 508, "width": 348, "height": 163 }
+          ]
         },
         {
           "id": "cat",
-          "dimensions": [{ "x": 4262, "y": 1015, "width": 408, "height": 408 }]
+          "dimensions": [{ "x": 2131, "y": 507, "width": 204, "height": 204 }]
         }
       ]
     },
@@ -111,52 +121,52 @@
       "elements": [
         {
           "id": "azan",
-          "dimensions": [{ "x": 3163, "y": 1759, "width": 1680, "height": 1548 }]
+          "dimensions": [{ "x": 1581, "y": 879, "width": 840, "height": 774 }]
         },
         {
           "id": "baker",
-          "dimensions": [{ "x": 4128, "y": 813, "width": 700, "height": 902 }]
+          "dimensions": [{ "x": 2064, "y": 406, "width": 350, "height": 451 }]
         },
         {
           "id": "fountain",
-          "dimensions": [{ "x": 2437, "y": 29, "width": 481, "height": 515 }]
+          "dimensions": [{ "x": 1218, "y": 14, "width": 240, "height": 257 }]
         },
         {
           "id": "bike",
-          "dimensions": [{ "x": 1987, "y": 41, "width": 287, "height": 244 }]
+          "dimensions": [{ "x": 993, "y": 20, "width": 143, "height": 122 }]
         },
         {
           "id": "motorbike",
-          "dimensions": [{ "x": 2572, "y": 1142, "width": 428, "height": 356 }]
+          "dimensions": [{ "x": 1286, "y": 571, "width": 214, "height": 178 }]
         },
         {
           "id": "population",
           "dimensions": [
-            { "x": 1715, "y": 96, "width": 186, "height": 204 },
-            { "x": 1828, "y": 288, "width": 519, "height": 471 },
-            { "x": 1563, "y": 1026, "width": 438, "height": 825 },
-            { "x": 637, "y": 1824, "width": 795, "height": 565 },
-            { "x": 2658, "y": 1740, "width": 286, "height": 464 },
-            { "x": 2880, "y": 836, "width": 228, "height": 329 },
-            { "x": 3228, "y": 977, "width": 258, "height": 343 },
-            { "x": 3543, "y": 316, "width": 280, "height": 402 },
-            { "x": 2751, "y": 567, "width": 341, "height": 212 }
+            { "x": 857, "y": 48, "width": 93, "height": 102 },
+            { "x": 914, "y": 144, "width": 259, "height": 235 },
+            { "x": 781, "y": 513, "width": 219, "height": 412 },
+            { "x": 318, "y": 912, "width": 397, "height": 282 },
+            { "x": 1329, "y": 870, "width": 143, "height": 232 },
+            { "x": 1440, "y": 418, "width": 114, "height": 164 },
+            { "x": 1614, "y": 488, "width": 129, "height": 171 },
+            { "x": 1771, "y": 158, "width": 140, "height": 201 },
+            { "x": 1375, "y": 283, "width": 170, "height": 106 }
           ]
         },
         {
           "id": "rope",
-          "dimensions": [{ "x": 2958, "y": 228, "width": 227, "height": 316 }]
+          "dimensions": [{ "x": 1479, "y": 114, "width": 113, "height": 158 }]
         },
         {
           "id": "street",
           "dimensions": [
-            { "x": 1602, "y": 1824, "width": 990, "height": 1010 },
-            { "x": 3474, "y": 739, "width": 654, "height": 475 },
-            { "x": 3307, "y": 800, "width": 192, "height": 182 },
-            { "x": 3857, "y": 385, "width": 413, "height": 414 },
-            { "x": 2022, "y": 858, "width": 415, "height": 625 },
-            { "x": 1442, "y": 772, "width": 833, "height": 257 },
-            { "x": 1569, "y": 479, "width": 270, "height": 352 }
+            { "x": 801, "y": 912, "width": 495, "height": 505 },
+            { "x": 1737, "y": 369, "width": 327, "height": 237 },
+            { "x": 1653, "y": 400, "width": 96, "height": 91 },
+            { "x": 1928, "y": 192, "width": 206, "height": 207 },
+            { "x": 1011, "y": 429, "width": 207, "height": 312 },
+            { "x": 721, "y": 386, "width": 416, "height": 128 },
+            { "x": 784, "y": 239, "width": 135, "height": 176 }
           ]
         }
       ]
@@ -168,44 +178,44 @@
       "elements": [
         {
           "id": "goat",
-          "dimensions": [{ "x": 3269, "y": 2090, "width": 505, "height": 421 }]
+          "dimensions": [{ "x": 1634, "y": 1045, "width": 252, "height": 210 }]
         },
         {
           "id": "jumping-frog",
-          "dimensions": [{ "x": 3392, "y": 2681, "width": 289, "height": 221 }]
+          "dimensions": [{ "x": 1696, "y": 1340, "width": 144, "height": 110 }]
         },
         {
           "id": "static-frog",
-          "dimensions": [{ "x": 1056, "y": 2803, "width": 175, "height": 170 }]
+          "dimensions": [{ "x": 528, "y": 1401, "width": 87, "height": 85 }]
         },
         {
           "id": "sheeps",
-          "dimensions": [{ "x": 1411, "y": 2039, "width": 717, "height": 414 }]
+          "dimensions": [{ "x": 705, "y": 1019, "width": 358, "height": 207 }]
         },
         {
           "id": "duck",
           "dimensions": [
-            { "x": 1442, "y": 2527, "width": 328, "height": 220 },
-            { "x": 1188, "y": 2301, "width": 223, "height": 380 },
-            { "x": 747, "y": 2301, "width": 352, "height": 230 }
+            { "x": 721, "y": 1263, "width": 164, "height": 110 },
+            { "x": 594, "y": 1150, "width": 111, "height": 190 },
+            { "x": 373, "y": 1150, "width": 176, "height": 115 }
           ]
         },
         {
           "id": "chicken",
-          "dimensions": [{ "x": 625, "y": 2532, "width": 289, "height": 298 }]
+          "dimensions": [{ "x": 312, "y": 1266, "width": 144, "height": 149 }]
         },
         {
           "id": "chick",
-          "dimensions": [{ "x": 376, "y": 2578, "width": 242, "height": 163 }]
+          "dimensions": [{ "x": 188, "y": 1289, "width": 121, "height": 81 }]
         },
         {
           "id": "lake",
           "dimensions": [
-            { "x": 2159, "y": 2069, "width": 1017, "height": 1205 },
-            { "x": 1854, "y": 2475, "width": 497, "height": 418 },
-            { "x": 3084, "y": 2563, "width": 266, "height": 473 },
-            { "x": 1339, "y": 2774, "width": 936, "height": 447 },
-            { "x": 2968, "y": 2956, "width": 1176, "height": 310 }
+            { "x": 1079, "y": 1034, "width": 508, "height": 602 },
+            { "x": 927, "y": 1237, "width": 248, "height": 209 },
+            { "x": 1542, "y": 1281, "width": 133, "height": 236 },
+            { "x": 669, "y": 1387, "width": 468, "height": 223 },
+            { "x": 1484, "y": 1478, "width": 588, "height": 155 }
           ]
         }
       ]
